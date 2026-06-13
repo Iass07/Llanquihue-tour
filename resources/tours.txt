@@ -1,0 +1,5 @@
+Lago Llanquihue;Lacustre;25000
+Volcan Osorno;Aventura;45000
+Frutillar Colonial;Cultural;18000
+Ruta Gastronomica;Gastronomico;35000
+Saltos del Petrohue;Naturaleza;30000
