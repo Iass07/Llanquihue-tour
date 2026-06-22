@@ -8,18 +8,16 @@ import java.util.ArrayList;
 
 public class GestorDatos {
 
-    public ArrayList<Tour> cargarTours(String rutaArchivo) {
+    public ArrayList<Tour> cargarTours(String ruta) {
 
-        ArrayList<Tour> listaTours = new ArrayList<>();
+        ArrayList<Tour> tours = new ArrayList<>();
 
         try {
-
-            BufferedReader lector =
-                    new BufferedReader(new FileReader(rutaArchivo));
+            BufferedReader br = new BufferedReader(new FileReader(ruta));
 
             String linea;
 
-            while ((linea = lector.readLine()) != null) {
+            while ((linea = br.readLine()) != null) {
 
                 String[] datos = linea.split(";");
 
@@ -29,18 +27,16 @@ public class GestorDatos {
 
                 Tour tour = new Tour(nombre, tipo, precio);
 
-                listaTours.add(tour);
+                tours.add(tour);
             }
 
-            lector.close();
+            br.close();
 
         } catch (Exception e) {
-
             System.out.println("Error al leer archivo: " + e.getMessage());
-
         }
 
-        return listaTours;
+        return tours;
     }
 }
 

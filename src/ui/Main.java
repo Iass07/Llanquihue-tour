@@ -2,6 +2,7 @@ package ui;
 
 import data.GestorDatos;
 import model.Tour;
+import service.TourService;
 
 import java.util.ArrayList;
 
@@ -14,21 +15,11 @@ public class Main {
         ArrayList<Tour> tours =
                 gestor.cargarTours("resources/tours.txt");
 
-        System.out.println("===== LISTA DE TOURS =====");
+        TourService servicio = new TourService();
 
-        for (Tour tour : tours) {
-            System.out.println(tour);
-        }
+        System.out.println("=== LISTA DE TOURS ===");
+        servicio.mostrarTours(tours);
 
-        System.out.println("\n===== TOURS CON PRECIO MAYOR A 30000 =====");
-
-        for (Tour tour : tours) {
-
-            if (tour.getPrecio() > 30000) {
-
-                System.out.println(tour);
-
-            }
-        }
+        servicio.buscarPorTipo(tours, "Cultural");
     }
 }

@@ -1,5 +1,4 @@
-Lago Llanquihue;Lacustre;25000
-Volcan Osorno;Aventura;45000
-Frutillar Colonial;Cultural;18000
-Ruta Gastronomica;Gastronomico;35000
-Saltos del Petrohue;Naturaleza;30000
+Ruta Gastronómica;Gastronomía;25000
+Paseo Lago Llanquihue;Lacustre;35000
+Excursión Volcán Osorno;Aventura;45000
+Tour Cultural Puerto Varas;Cultural;30000
